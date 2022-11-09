@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.svg">
+    <link rel="stylesheet" href="css/night.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="vendor/fontawesome/all.min.css">
+    <script src="vendor/fontawesome/all.min.js"></script>
+    <title>Myanmar Money Exchange Calculator</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="top">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="images/logo.svg">
+                <h3 class="bran-name">MMEx</h3>
+            </div>
+            <div class="change-mode">
+                <button onclick="nightChange()"><i class="fas fa-moon"></i> <i class="fas fa-toggle-off" id="modeIcon"></i></button>
+            </div>
+        </div>
+        <div class="result-container">
+            <p class="result">00.0</p>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <form class="cal">
+        <div class="cal-container">
+            <label>Input</label>
+            <input type="number" class="input" placeholder="0.00" autofocus required min="1">
+        </div>
+        <div class="cal-container from-container">
+            <label>From</label>
+            <select id="from" required>
+                <option value="" selected disabled>Select Currency</option>
+                <option value="1">MMK</option>
+            </select>
+        </div>
+        <div class="cal-container to-container">
+            <label>To</label>
+            <select id="to">
+                <option value="1">MMK</option>
+            </select>
+        </div>
+        <div class="cal-container">
+            <button class="btn">Calculate</button>
+        </div>
+    </form>
+
+    <div class="table-container">
+        <table class="tb">
+            <thead>
+                <tr>
+                    <th>Date</td>
+                    <th>From</td>
+                    <th>To</td>
+                    <th>Result</td>
+                </tr>
+            </thead>
+            <tbody class="tbody"></tbody>
+        </table>
+    </div>
+</div>
+    <script src="js/app.js"></script> 
+</body>
+</html>

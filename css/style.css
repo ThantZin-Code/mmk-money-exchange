@@ -1,0 +1,205 @@
+:root {
+    --primary: #22d1ee;
+    --text: #707070;
+    --light: #ffffff;
+    --dark: #000000;
+    --soft-dark: #f2f2f2;
+    --semi-dark: #dddddd;
+    --br : 5px
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 700px;
+    margin: 100px auto;
+}
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: var(--text);
+}
+
+.logo {
+    display: flex;
+    font-size: 30px;
+    align-items: flex-end;
+}
+.logo-container img {
+    width: 40px;
+    margin-right: 10px;
+}
+.result-container {
+    width: 98%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    color: var(--text);
+    font-size: 40px;
+    margin-right: 5px;
+}
+.divider {
+    background-color: var(--text);
+    height: 5px;
+    border-radius: var(--br);
+}
+
+/* end top part  */
+
+.cal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 10px;
+    color: var(--text);
+    
+}
+.cal-container {
+    width: 150px;
+}
+.cal-container label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+#to, #from, .input {
+    width: 100%;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--text);
+
+}
+#to:focus-visible, #from:focus-visible {
+    outline: none;
+}
+.input::-webkit-outer-spin-button, .input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+} /* for firefox style */
+
+input {
+    outline: none;
+    text-align: right;
+}
+.btn {
+    color: var(--light);
+    background-color: var(--primary);
+    width: 100%;
+    padding: 15px 0px;
+    border: none;
+    border-radius: var(--br);
+    outline: none;
+    font-size: 25px;
+}
+.btn:active {
+    background-color: #126674;
+}
+
+/* end of calculate */
+
+.table-container {
+    width: 100%;
+    color: var(--text);
+
+}
+.tb {
+    width: 100%;
+    border-radius: var(--br);
+    margin-top: 20px;
+}
+
+tbody tr {
+    background-color: var(--soft-dark);
+}
+tbody tr:hover {
+    background-color: var(--semi-dark);
+}
+.tb th {
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 5px 10px;
+    border-radius: var(--br);
+    text-align: left;
+}
+thead th:last-child {
+    text-align: right;
+} 
+tbody td:last-child {
+    text-align: right;
+}
+td {
+    border-radius: var(--br);
+    padding: 5px 10px;
+}
+#rowspacer td{
+    text-align: center;
+    background-color: var(--soft-dark);
+}
+.change-mode {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+.change-mode button {
+    color: var(--text);
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background-color: var(--light);
+    font-size: 20px;
+}
+
+.fa-toggle-on, .fa-toggle-off {
+    margin-left: 3px;
+    font-size: 25px;
+}
+
+/* end style for large media*/
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+        margin: 30px auto;
+    }
+
+    .logo-container {
+        width: 95%;
+    }
+
+    .cal {
+        flex-wrap: wrap;
+    }
+    .cal-container {
+        width: 100%;
+    }
+    .from-container, .to-container {
+        width: 46%;
+    }
+    #to, #from, .input {
+        font-size: 15px;
+        padding: 10px 15px;
+        margin-bottom: 15px;
+    }
+    .input {
+        border: 1px solid var(--text);
+    }
+    .btn {
+        padding: 15px 0px;
+    }
+    .change-mode button {
+        width: 30px;
+        height: 30px;
+        border: none;
+    }
+}

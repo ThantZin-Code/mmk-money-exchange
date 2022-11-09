@@ -1,0 +1,33 @@
+:root {
+    --night : #19191a;
+    --soft-night: #a9acb1;
+    --secondary-night: #3e3b3c;
+    --night-text : #f0eeee;
+}
+.night {
+    background-color: var(--night);
+}
+.night tr {
+    background-color: var(--soft-night);
+}
+.night .divider {
+    background-color: var(--secondary-night);
+}
+.night .result, .night td {
+    color: var(--secondary-night);
+}
+.night input, .night .to, .night .from {
+    color: var(--night);
+    background: var(--light);
+}
+.night h3, .night .result, .night label {
+    color: var(--night-text);
+}
+.night .change-mode button{
+    background-color: var(--night);
+    border-color: var(--light);
+}
+
+.night .fa-moon, .night .fa-toggle-on {
+    color: white;
+}
